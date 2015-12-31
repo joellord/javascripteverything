@@ -1,0 +1,67 @@
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header small-header" data-bind="style: {backgroundImage: bgImg}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading smaller-heading">
+                    <h1 data-bind="text: title"></h1>
+                    <hr class="small">
+                    <span class="subheading" data-bind="text: subtitle"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-8 col-md-8">
+            <!-- ko foreach: blogPosts -->
+            <!-- ko if: ($parent.showFirstOnly() && $index() < 2) || !$parent.showFirstOnly() -->
+            <div class="post-preview">
+                <a data-bind="attr: {href: '#!blog/post/' + id}">
+                    <h2 class="post-title" data-bind="text: title"></h2>
+                    <h3 class="post-subtitle" data-bind="text: abstract"></h3>
+                </a>
+                <p class="post-meta">Posted by <a data-bind="attr: {href: author_link}, text: author"></a> on <span data-bind="text: formattedDate"></span></p>
+            </div>
+            <hr>
+            <!-- /ko -->
+            <!-- /ko -->
+
+            <!-- Pager -->
+            <!-- ko if: showFirstOnly() && blogPosts().length > 2 -->
+            <ul class="pager">
+                <li class="next">
+                    <a href="#" data-bind="click: showAll">Older Posts &rarr;</a>
+                </li>
+            </ul>
+            <!-- /ko -->
+        </div>
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-2 col-md-2">
+            <div class="row text-center">
+                <img src="img/me.jpg" width="90%">
+            </div>
+            <div class="row">
+                <div class="bio">
+                    {<br/>
+                    &nbsp;&nbsp;  name: "Joel Lord",<br/>
+                    &nbsp;&nbsp;  job: "Development Manage",<br/>
+                    &nbsp;&nbsp;  employer: "Macadamian Tech",<br/>
+                    &nbsp;&nbsp;  tabsOrSpaces: "spaces",<br/>
+                    &nbsp;&nbsp;  keywords: [<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;    "javascript junkie",<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;    "technology enthusiast",<br/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;    "tinkerer"<br/>
+                    &nbsp;&nbsp;  ]<br/>
+                    }<br/>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1 col-md-1"></div>
+    </div>
+</div>

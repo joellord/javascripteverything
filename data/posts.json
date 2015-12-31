@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Command Line Tools with Node",
+    "subtitle": "Run your NodeJs scripts as a command line tool",
+    "time": 1449378000000,
+    "formattedDate": "December 6th, 2015",
+    "author": "Joel Lord",
+    "author_link": "#/about",
+    "production": true,
+    "abstract": "How to easily create command line tools using NodeJs.",
+    "keywords": ["node", "cli", "tools", "tips"],
+    "id": "2015-12-06_cli_with_node",
+    "bg": "post-bg/squid_wall"
+  },
+  {
+    "title": "WordPress moves to Javascript",
+    "subtitle": "Javascript everything !",
+    "time": 1448409600000,
+    "formattedDate": "November 24th, 2015",
+    "author": "Joel Lord",
+    "author_link": "#/about",
+    "production": true,
+    "abstract": "WordPress is migrating to a Javascript interface, so what?.",
+    "keywords": ["wordpress", "javascript", "react"],
+    "id": "2015-11-24-wp_moves_to_js",
+    "bg": "post-bg/shelf"
+  },
+  {
+    "title": "Creating Node Modules",
+    "subtitle": "Part 4 - Publishing",
+    "time": 1448150400000,
+    "formattedDate": "November 21th, 2015",
+    "author": "Joel Lord",
+    "author_link": "#/about",
+    "production": true,
+    "abstract": "Now that you have all the pieces ready, let's publish it.",
+    "keywords": ["node", "modules", "publish", "npm"],
+    "id": "2015-11-21_node_modules_4",
+    "bg": ""
+},
+  {
+    "title": "Creating Node Modules",
+    "subtitle": "Part 3 - Testing",
+    "time": 1448150400000,
+    "formattedDate": "November 21th, 2015",
+    "author": "Joel Lord",
+    "author_link": "#/about",
+    "production": true,
+    "abstract": "Before we publish this module, let's add some tests to it.",
+    "keywords": ["node", "modules", "test", "npm"],
+    "id": "2015-11-21_node_modules_3",
+    "bg": ""
+  },
+  {
+    "title": "My speaking goals for '16",
+    "subtitle": "It's not a real goal until you write it down",
+    "time": 1448150400000,
+    "formattedDate": "November 21th, 2015",
+    "author": "Joel Lord",
+    "author_link": "#/about",
+    "production": true,
+    "abstract": "As the year end is approaching, I am setting myself some personal speaking goals.",
+    "keywords": ["personal", "speaking", "goal"],
+    "id": "2015-11-21_speaking-goals",
+    "bg": "post-bg/goal"
+  },
+  {
+    "title": "Creating Node Modules",
+    "subtitle": "Part 2 - Packaging",
+    "time": 1448064000000,
+    "formattedDate": "November 20th, 2015",
+    "author": "Joel Lord",
+    "author_link": "#/about",
+    "production": true,
+    "abstract": "Second part of the series, focusing on the package.json file generation.",
+    "keywords": ["node", "modules", "npm", "init"],
+    "id": "2015-11-20_node_modules_2",
+    "bg": ""
+  },
+  {
+    "title": "Creating Node Modules",
+    "subtitle": "Part 1 - Building",
+    "time": 1447822800000,
+    "formattedDate": "November 18th, 2015",
+    "author": "Joel Lord",
+    "author_link": "#/about",
+    "production": true,
+    "abstract": "First part of a series that I plan to make on how to create and publish a node module on npm.",
+    "keywords": ["node", "modules", "npm"],
+    "id": "2015-11-18_node_modules_1",
+    "bg": ""
+  }
+]

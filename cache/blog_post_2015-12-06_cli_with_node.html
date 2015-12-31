@@ -1,0 +1,250 @@
+<html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Random thoughts from a random dev">
+    <meta name="author" content="Joel Lord">
+    <meta name="og:image" content="img/home-bg.jpg">
+
+    <title>Javascript Everything !</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-70660833-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="js/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="start" src="js/start.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="knockout" src="js/libs/knockout.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/home-page/home" src="js/components/home-page/home.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/about-page/about" src="js/components/about-page/about.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/speaking-page/speaking" src="js/components/speaking-page/speaking.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/contact-page/contact" src="js/components/contact-page/contact.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/blog-page/blog" src="js/components/blog-page/blog.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/blog-post-page/blog-post" src="js/components/blog-post-page/blog-post.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="js/libs/jquery.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="highlight" src="js/ko_binding_highlight.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="js/text.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="signals" src="js/libs/signals.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap" src="js/libs/bootstrap.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="crossroads" src="js/libs/crossroads.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="hasher" src="js/libs/hasher.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/nav-bar/nav-bar" src="js/components/nav-bar/nav-bar.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/ko-footer/ko-footer" src="js/components/ko-footer/ko-footer.js"></script></head>
+
+<body>
+
+    <nav-bar>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">#</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#!home">Home</a>
+                </li>
+                <li>
+                    <a href="#!about">About</a>
+                </li>
+                <li>
+                    <a href="#!speaking">Speaking</a>
+                </li>
+                <li>
+                    <a href="#!blog">Blogging</a>
+                </li>
+                <li>
+                    <a href="#!contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav></nav-bar>
+
+
+    <!-- ko component: {
+      name: route,
+      params: params
+    } --><!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" data-bind="style: {backgroundImage: bgImg}" style="background-image: url(http://www.javascripteverything.com/img/post-bg/squid_wall.jpg); ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading smaller-heading">
+                    <h1 data-bind="text: title">Command Line Tools with Node</h1>
+                    <h2 class="subheading" data-bind="text: subtitle">Run your NodeJs scripts as a command line tool</h2>
+                    <span class="meta">Posted by <a data-bind="attr: {href: authorLink}, text: author" href="#/about">Joel Lord</a> on <span data-bind="text: formattedDate">December 6th, 2015</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" data-bind="html: postContent, syntaxhighlight: postContent"><p>Whenever I can use Javascript, I use it.  I like it's versatility and I like the fact that I don't need to switch from one language to another when creating small scripts.  Recently, I've discovered that I can create CLI tools with Node.  Here is how to do it.</p>
+
+<h2 class="section-heading">Today's Timestamp</h2>
+
+<p>This page is dynamically created based on a list of posts that I maintain.  Every one of those entries requires a timestamp.  I figured it would be easier if I ever want to localize this web site.  This being said, every time I enter a new post, I need to open Node and figure out that the current timestamp is.  In the next steps, we'll create a Node CLI that ouputs the current timestamp.</p>
+
+<h2 class="section-heading">Initialize Your NPM Module</h2>
+
+<p>As explained in the <a href="/#!blog/post/2015-11-18_node_modules_1" target="_blank">Create Node Modules</a> series, when you start a new module, you should use npm init.  Let's start by this. </p>
+
+<pre class="hljs cpp">SYS0635:~ jlord$ npm init
+
+name: (todayTimestamp) today-timestamp
+version: (<span class="hljs-number">1.0</span><span class="hljs-number">.0</span>) <span class="hljs-number">0.0</span><span class="hljs-number">.1</span>
+description: A small command line tool that outputs the current timestamp.
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+license: (ISC) MIT
+
+About to write to /path/to/todayTimestamp/package.json:
+
+{
+  <span class="hljs-string">"name"</span>: <span class="hljs-string">"today-timestamp"</span>,
+  <span class="hljs-string">"version"</span>: <span class="hljs-string">"0.0.1"</span>,
+  <span class="hljs-string">"description"</span>: <span class="hljs-string">"A small command line tool that outputs the current timestamp."</span>,
+  <span class="hljs-string">"main"</span>: <span class="hljs-string">"index.js"</span>,
+  <span class="hljs-string">"scripts"</span>: {
+    <span class="hljs-string">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+  },
+  <span class="hljs-string">"author"</span>: <span class="hljs-string">"Joel Lord "</span>,
+  <span class="hljs-string">"license"</span>: <span class="hljs-string">"MIT"</span>
+}
+
+
+Is <span class="hljs-keyword">this</span> ok? (yes) yes
+</pre>
+
+<p>This will initialize a new package.json that you can use to maintain your script.</p>
+
+<h2 class="section-heading">The Basic Script</h2>
+
+<p>Let's start by writing the basic script.</p>
+
+<pre class="hljs coffeescript"><span class="hljs-comment">#!/usr/bin/env node</span>
+
+var d = <span class="hljs-keyword">new</span> Date();
+<span class="hljs-built_in">console</span>.log(d.getTime());
+</pre>
+
+<p>Notice that the first line is a <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" target="_blank">hashbang</a> instruction.  This tells your OS which interpreter to use with this script.  The other 2 lines are simply used to fetch the timestamp and output it.</p>
+
+<h2 class="section-heading">Making the Script Executable</h2>
+
+<p>We must now tell npm that our script is an executable one.  We do so by adding a "bin" property to our package.json file.  It will take a key-value pair where the key is the name of the CLI command and the value is the file that gets executed relative to the package.json file.</p>
+
+<pre class="hljs bash">...
+<span class="hljs-string">"scripts"</span>: {
+  <span class="hljs-string">"test"</span>: <span class="hljs-string">"echo \"Error: no test specified\" &amp;&amp; exit 1"</span>
+},
+<span class="hljs-string">"bin"</span>: {
+  <span class="hljs-string">"today-timestamp"</span>: <span class="hljs-string">"./index.js"</span>
+},
+<span class="hljs-string">"author"</span>: <span class="hljs-string">"Joel Lord "</span>,
+...
+</pre>
+
+<h2 class="section-heading">Install the Script</h2>
+
+<p>We are now ready to install the script to our machine by running an npm install.</p>
+
+<pre class="hljs ruby"><span class="hljs-constant">SYS0635</span><span class="hljs-symbol">:~</span> jlord<span class="hljs-variable">$ </span>npm install -g
+<span class="hljs-constant">SYS0635</span><span class="hljs-symbol">:~</span> jlord<span class="hljs-variable">$ </span>today-timestamp
+<span class="hljs-number">1449416795658</span>
+</pre>
+
+<h2 class="section-heading">Going One Step Further</h2>
+
+<p>That's it !  You have your command line tool up and running.  Now if you want to go one step furter, you could add support for command line arguments or you can also ask the user for input.  More on this soon...</p></div>
+        </div>
+    </div>
+</article>
+<!-- /ko -->
+
+    <hr>
+
+    <!-- Footer -->
+    <ko-footer><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="http://www.twitter.com/joel__lord" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ca.linkedin.com/in/joel-lord-9099b232" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.github.com/joellord" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:me@joel-lord.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Copyright © Joel Lord <span data-bind="text: year">2015</span></p>
+                <p class="copyright text-muted">Built on top of <a href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a></p>
+            </div>
+        </div>
+    </div>
+</footer></ko-footer>
+
+
+    <script data-main="js/main" src="js/libs/require.js"></script>
+
+
+
+
+
+</body></html>

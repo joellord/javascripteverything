@@ -1,0 +1,84 @@
+<p>Whenever I can use Javascript, I use it.  I like it's versatility and I like the fact that I don't need to switch from one language to another when creating small scripts.  Recently, I've discovered that I can create CLI tools with Node.  Here is how to do it.</p>
+
+<h2 class="section-heading">Today's Timestamp</h2>
+
+<p>This page is dynamically created based on a list of posts that I maintain.  Every one of those entries requires a timestamp.  I figured it would be easier if I ever want to localize this web site.  This being said, every time I enter a new post, I need to open Node and figure out that the current timestamp is.  In the next steps, we'll create a Node CLI that ouputs the current timestamp.</p>
+
+<h2 class="section-heading">Initialize Your NPM Module</h2>
+
+<p>As explained in the <a href="/#!blog/post/2015-11-18_node_modules_1" target="_blank">Create Node Modules</a> series, when you start a new module, you should use npm init.  Let's start by this. </p>
+
+<pre>
+SYS0635:~ jlord$ npm init
+
+name: (todayTimestamp) today-timestamp
+version: (1.0.0) 0.0.1
+description: A small command line tool that outputs the current timestamp.
+entry point: (index.js)
+test command:
+git repository:
+keywords:
+license: (ISC) MIT
+
+About to write to /path/to/todayTimestamp/package.json:
+
+{
+  "name": "today-timestamp",
+  "version": "0.0.1",
+  "description": "A small command line tool that outputs the current timestamp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joel Lord <jlord@macadamian.com>",
+  "license": "MIT"
+}
+
+
+Is this ok? (yes) yes
+</pre>
+
+<p>This will initialize a new package.json that you can use to maintain your script.</p>
+
+<h2 class="section-heading">The Basic Script</h2>
+
+<p>Let's start by writing the basic script.</p>
+
+<pre>
+#!/usr/bin/env node
+
+var d = new Date();
+console.log(d.getTime());
+</pre>
+
+<p>Notice that the first line is a <a href="https://en.wikipedia.org/wiki/Shebang_(Unix)" target="_blank">hashbang</a> instruction.  This tells your OS which interpreter to use with this script.  The other 2 lines are simply used to fetch the timestamp and output it.</p>
+
+<h2 class="section-heading">Making the Script Executable</h2>
+
+<p>We must now tell npm that our script is an executable one.  We do so by adding a "bin" property to our package.json file.  It will take a key-value pair where the key is the name of the CLI command and the value is the file that gets executed relative to the package.json file.</p>
+
+<pre>
+...
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+"bin": {
+  "today-timestamp": "./index.js"
+},
+"author": "Joel Lord <jlord@macadamian.com>",
+...
+</pre>
+
+<h2 class="section-heading">Install the Script</h2>
+
+<p>We are now ready to install the script to our machine by running an npm install.</p>
+
+<pre>
+SYS0635:~ jlord$ npm install -g
+SYS0635:~ jlord$ today-timestamp
+1449416795658
+</pre>
+
+<h2 class="section-heading">Going One Step Further</h2>
+
+<p>That's it !  You have your command line tool up and running.  Now if you want to go one step furter, you could add support for command line arguments or you can also ask the user for input.  More on this soon...</p>

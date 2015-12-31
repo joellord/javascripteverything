@@ -1,0 +1,66 @@
+[
+  {
+    "time": 1456376400000,
+    "title": "Smart homes made smarter with Javascript",
+    "conference": "Confoo",
+    "location": "Montreal, QC, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1456376400000,
+    "title": "Sockets bring light at the end of the tunnel",
+    "conference": "Confoo",
+    "location": "Montreal, QC, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1447477200000,
+    "title": "Robocalypse: Controlling robots with kinect gestures",
+    "conference": "Full Stack Toronto",
+    "location": "Toronto, ON, Canada",
+    "movie": "https://www.youtube.com/watch?v=B5nTxkODwtg",
+    "slides": "https://speakerdeck.com/joellord/robocalypse-full-stack-toronto-2015"
+  },
+  {
+    "time": 1446004800000,
+    "title": "Robocalypse: Controlling robots with kinect gestures",
+    "conference": "Full Stack London",
+    "location": "London, UK",
+    "movie": "https://skillsmatter.com/skillscasts/6764-robocalypse-controlling-nodebots-with-kinect-gestures",
+    "slides": "https://speakerdeck.com/joellord/robocalypse-controlling-nodebots-with-kinect-gestures"
+  },
+  {
+    "time": 1443067200000,
+    "title": "Developing for IoT Workshop",
+    "conference": "IoT 613",
+    "location": "Ottawa, ON, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1418187600000,
+    "title": "Websockets 101: Using socket.io",
+    "conference": "Ottawa Javascript",
+    "location": "Ottawa, ON, Canada",
+    "movie": "",
+    "slides": "http://slides.com/joellord/ottawajs-websockets"
+  },
+  {
+    "time": 1412740800000,
+    "title": "Nodebots: Detecting gestures with NodeJs & Kinect",
+    "conference": "Ottawa Javascript",
+    "location": "Ottawa, ON, Canada",
+    "movie": "",
+    "slides": "http://slides.com/joellord/nodebots-detecting-gestures-with-node-js-kinect"
+  },
+  {
+    "time": 1376625600000,
+    "title": "How and why to use regular expressions in PHP",
+    "conference": "Northeast PHP",
+    "location": "Boston, MA, USA",
+    "movie": "https://www.youtube.com/watch?v=5M1VTOgfiRk",
+    "slides": "http://slides.com/joellord/how-and-why-to-use-regular-expressions"
+  }
+]

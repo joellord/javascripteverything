@@ -1,0 +1,27 @@
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" data-bind="style: {backgroundImage: bgImg}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading smaller-heading">
+                    <h1 data-bind="text: title">Creating a Node module from scratch</h1>
+                    <h2 class="subheading" data-bind="text: subtitle"></h2>
+                    <span class="meta">Posted by <a data-bind="attr: {href: authorLink}, text: author"></a> on <span data-bind="text: formattedDate"></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" data-bind="html: postContent, syntaxhighlight: postContent">
+                <!-- Actual post content -->
+
+            </div>
+        </div>
+    </div>
+</article>

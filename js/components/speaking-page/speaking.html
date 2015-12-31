@@ -1,0 +1,67 @@
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" data-bind="style: {backgroundImage: bgImg}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1 data-bind="text: title"></h1>
+                    <hr class="small">
+                    <span class="subheading" data-bind="text: subtitle"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p>I like to talk.  Here is a list of various talks I've given in the last few years and where to find me in the upcoming months.  If you are interested, <a href="#/contact">drop me a line</a>.</p>
+
+            <h2 class="section-heading">Future Events</h2>
+
+            <table data-bind="foreach: futureEvents" class="table table-striped small-table-text">
+                <tr>
+                    <td data-bind="text: formattedDate"></td>
+                    <td data-bind="text: title"></td>
+                    <td data-bind="text: conference"></td>
+                    <td data-bind="text: location"></td>
+                    <td>
+                        <!-- ko if: movie -->
+                        <a target="_blank" data-bind="attr: {href: movie}"><i class="fa fa-film"></i></a>
+                        <!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
+                    </td>
+                </tr>
+            </table>
+
+            <h2 class="section-heading">Past Events</h2>
+
+            <table data-bind="foreach: pastEvents" class="table table-striped small-table-text">
+                <tr>
+                    <td data-bind="text: formattedDate"></td>
+                    <td data-bind="text: title"></td>
+                    <td data-bind="text: conference"></td>
+                    <td data-bind="text: location"></td>
+                    <td>
+                        <!-- ko if: movie -->
+                        <a target="_blank" data-bind="attr: {href: movie}"><i class="fa fa-film"></i></a>
+                        <!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
