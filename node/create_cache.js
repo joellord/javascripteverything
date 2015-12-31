@@ -23,7 +23,7 @@ function follow(pageToCache, callback) {
             console.log(pageToCache + ': ?');
         }
 
-        window.setTimeout(function() {
+        setTimeout(function() {
             var html = page.evaluate(function() {return document.documentElement.outerHTML;});
             filename = "../cache/" + pageToCache.replace(/\//g, "_") + ".html";
             fs.write(filename, html, "w+");
@@ -42,11 +42,11 @@ function process() {
         var pageToCache = pagesToCache[0];
         pagesToCache.splice(0, 1);
         console.log("Preparing to follow " + pageToCache);
-        window.setTimeout(function() {
+        setTimeout(function() {
             follow(pageToCache, process);
         }, 2500);
     } else {
-        window.setTimeout(function() {
+        setTimeout(function() {
             console.log("Done");
             phantom.exit();
         }, 3000);
