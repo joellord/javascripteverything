@@ -1,5 +1,18 @@
 [
   {
+    "title": "Array methods you should be using",
+    "subtitle": "For a cleaner and more readable code base",
+    "time": 1452229200000,
+    "formattedDate": "January 8th, 2016",
+    "author": "Joel Lord",
+    "author_link": "#!about",
+    "production": true,
+    "abstract": "There are some built-in array methods that you should always be using instead of for loops to write cleaner code.",
+    "keywords": ["javascript", "array", "prototype"],
+    "id": "2016-01-08_array_methods",
+    "bg": "post-bg/array"
+  },
+  {
     "title": "Upgrading Node with n",
     "subtitle": "Using n as a Node binary management tool",
     "time": 1451538000000,
