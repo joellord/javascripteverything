@@ -17,6 +17,7 @@
 
     <!-- Custom CSS -->
     <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -47,9 +48,10 @@
 
 <body>
 
-    <div data-bind="if: false" class="cssload-box-loading">
-
+    <!-- ko if: false -->
+    <div class="cssload-box-loading">
     </div>
+    <!-- /ko -->
 
     <nav-bar></nav-bar>
 
