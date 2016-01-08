@@ -5,7 +5,8 @@ var pagesToCache = [
     "speaking",
     "blog",
     "contact",
-    "about"
+    "about",
+    "blog-all"
 ];
 
 var blogPosts = require("../data/posts.json");

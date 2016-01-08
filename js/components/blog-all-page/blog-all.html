@@ -20,7 +20,6 @@
         <div class="col-lg-1 col-md-1"></div>
         <div class="col-lg-8 col-md-8">
             <!-- ko foreach: blogPosts -->
-            <!-- ko if: ($parent.showFirstOnly() && $index() < 2) || !$parent.showFirstOnly() -->
             <div class="post-preview">
                 <a data-bind="attr: {href: '#!blog/post/' + id}">
                     <h2 class="post-title" data-bind="text: title"></h2>
@@ -30,16 +29,7 @@
             </div>
             <hr>
             <!-- /ko -->
-            <!-- /ko -->
 
-            <!-- Pager -->
-            <!-- ko if: showFirstOnly() && blogPosts().length > 2 -->
-            <ul class="pager">
-                <li class="next">
-                    <a href="#!blog-all">Older Posts &rarr;</a>
-                </li>
-            </ul>
-            <!-- /ko -->
         </div>
         <div class="col-lg-1 col-md-1"></div>
         <div class="col-lg-2 col-md-2">

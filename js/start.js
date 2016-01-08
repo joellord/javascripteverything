@@ -8,6 +8,7 @@ requirejs(
         "components/contact-page/contact",
         "components/blog-page/blog",
         "components/blog-post-page/blog-post",
+        "components/blog-all-page/blog-all",
         "jquery",
         "bootstrap",
         "highlight"
@@ -20,7 +21,8 @@ requirejs(
          SpeakingComponent,
          ContactComponent,
          BlogComponent,
-         BlogPostComponent
+         BlogPostComponent,
+         BlogAllComponent
     ) {
 
 
@@ -33,6 +35,7 @@ requirejs(
     ko.components.register("contact", ContactComponent);
     ko.components.register("blog", BlogComponent);
     ko.components.register("blogPost", BlogPostComponent);
+    ko.components.register("blog-all", BlogAllComponent);
 
 
     var routes = [
@@ -41,7 +44,8 @@ requirejs(
         "speaking",
         "contact",
         "blog",
-        "blog/post/{post_id}"
+        "blog/post/{post_id}",
+        "blog-all"
     ];
 
     var parentVm = {
