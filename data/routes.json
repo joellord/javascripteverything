@@ -1,0 +1,173 @@
+[
+  {
+    "id": "home",
+    "description": "",
+    "type": "normal",
+    "meta": {
+      "ogTitle": {
+        "id": "ogTitle",
+        "attribute": "content",
+        "value": "Javascript Everything!"
+      },
+      "ogDescription": {
+        "id": "ogDescription",
+        "attribute": "content",
+        "value": "Random thoughts from a random dev"
+      },
+      "ogImage": {
+        "id": "ogImage",
+        "attribute": "content",
+        "value": "http://javascripteverything.com/img/home-bg.jpg"
+      },
+      "twitterTitle": {
+        "id": "twitterTitle",
+        "attribute": "value",
+        "value": "Javascript Everything!"
+      },
+      "twitterDescription": {
+        "id": "twitterDescription",
+        "attribute": "value",
+        "value": "Random thoughts from a random dev..."
+      },
+      "twitterImage": {
+        "id": "twitterImage",
+        "attribute": "content",
+        "value": "http://javascripteverything.com/img/home-bg.jpg"
+      },
+      "twitterUrl": {
+        "id": "twitterUrl",
+        "attribute": "value",
+        "value": "http://javascripteverything.com/"
+      },
+      "twitterLabel1": {
+        "id": "twitterLabel1",
+        "attribute": "value",
+        "value": "Next event"
+      },
+      "twitterData1": {
+        "id": "twitterData1",
+        "attribute": "value",
+        "value": "Confoo (Feb 23)"
+      },
+      "twitterLabel2": {
+        "id": "twitterLabel2",
+        "attribute": "value",
+        "value": "Latest blog article"
+      },
+      "twitterData2": {
+        "id": "twitterData2",
+        "attribute": "value",
+        "value": "Array functions in Javascript"
+      }
+    },
+    "public": true
+  },
+  {
+    "id": "about",
+    "description": "About Me",
+    "type": "normal",
+    "meta": {
+      "ogTitle": {
+        "id": "ogTitle",
+        "attribute": "content",
+        "value": "Javascript Everything!"
+      },
+      "ogDescription": {
+        "id": "ogDescription",
+        "attribute": "content",
+        "value": "A little bit more about myself."
+      }
+    },
+    "public": true
+  },
+  {
+    "id": "about",
+    "description": "Speaking",
+    "type": "normal",
+    "meta": {
+      "ogTitle": {
+        "id": "ogTitle",
+        "attribute": "content",
+        "value": "Javascript Everything!"
+      },
+      "ogDescription": {
+        "id": "ogDescription",
+        "attribute": "content",
+        "value": "Here are my upcoming speaking events."
+      }
+    },
+    "public": true
+  },
+  {
+    "id": "contact",
+    "description": "Contact Me",
+    "type": "normal",
+    "meta": {
+      "ogTitle": {
+        "id": "ogTitle",
+        "attribute": "content",
+        "value": "Javascript Everything!"
+      },
+      "ogDescription": {
+        "id": "ogDescription",
+        "attribute": "content",
+        "value": "So you wanna chat?"
+      }
+    },
+    "public": true
+  },
+  {
+    "id": "blog",
+    "description": "Blogging Area",
+    "type": "normal",
+    "meta": {
+      "ogTitle": {
+        "id": "ogTitle",
+        "attribute": "content",
+        "value": "Javascript Everything!"
+      },
+      "ogDescription": {
+        "id": "ogDescription",
+        "attribute": "content",
+        "value": "Some of the smart stuff that I wrote."
+      }
+    },
+    "public": true
+  },
+  {
+    "id": "blog/post/{post_id}",
+    "description": "Blogging Area",
+    "type": "blogPost",
+    "meta": {
+      "ogTitle": {
+        "id": "ogTitle",
+        "attribute": "content",
+        "value": "Javascript Everything!"
+      },
+      "ogDescription": {
+        "id": "ogDescription",
+        "attribute": "content",
+        "value": "Some of the smart stuff that I wrote."
+      }
+    },
+    "public": true
+  },
+  {
+    "id": "blog-all",
+    "description": "Blogging Area",
+    "type": "normal",
+    "meta": {
+      "ogTitle": {
+        "id": "ogTitle",
+        "attribute": "content",
+        "value": "Javascript Everything!"
+      },
+      "ogDescription": {
+        "id": "ogDescription",
+        "attribute": "content",
+        "value": "This is everything I wrote."
+      }
+    },
+    "public": true
+  }
+]

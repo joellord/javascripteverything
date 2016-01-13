@@ -9,6 +9,7 @@ requirejs(
         "components/blog-page/blog",
         "components/blog-post-page/blog-post",
         "components/blog-all-page/blog-all",
+        "text!../data/routes.json",
         "jquery",
         "bootstrap",
         "highlight"
@@ -22,7 +23,8 @@ requirejs(
          ContactComponent,
          BlogComponent,
          BlogPostComponent,
-         BlogAllComponent
+         BlogAllComponent,
+         RoutesData
     ) {
 
 
@@ -38,15 +40,9 @@ requirejs(
     ko.components.register("blog-all", BlogAllComponent);
 
 
-    var routes = [
-        "home",
-        "about",
-        "speaking",
-        "contact",
-        "blog",
-        "blog/post/{post_id}",
-        "blog-all"
-    ];
+    var routes = [];
+    RoutesData = JSON.parse(RoutesData);
+    RoutesData.map(function(el) {routes.push(el.id);});
 
     var parentVm = {
         route: ko.observable(routes[0]),
@@ -75,12 +71,29 @@ requirejs(
         }
     });
 
+    function setMetaTags(route) {
+        var defaultData = RoutesData.find(function(e) {return e.id === "home"});
+        var routeData = RoutesData.find(function(e) {return e.id === route});
+        for (var metaData in routeData.meta) {
+            defaultData.meta[metaData] = routeData.meta[metaData];
+        }
+        for (var metaData in defaultData.meta) {
+            var el = document.querySelector("#" + defaultData.meta[metaData].id);
+            if (el) {
+                el.setAttribute(defaultData.meta[metaData].attribute, defaultData.meta[metaData].value);
+            } else {
+                console.log("Could not find element id " + defaultData.meta[metaData].id);
+            }
+        }
+    }
+
     hasher.prependHash = "!";
 
     //setup hasher
     function parseHash(newHash, oldHash){
         if (crossroads._getMatchedRoutes(newHash).length > 0) {
             ga('send', 'pageview', '#!' + newHash);
+            setMetaTags(newHash);
             crossroads.parse(newHash);
         } else {
             hasher.setHash("home");
