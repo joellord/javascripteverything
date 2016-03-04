@@ -72,8 +72,12 @@ requirejs(
     });
 
     function setMetaTags(route) {
-        var defaultData = RoutesData.find(function(e) {return e.id === "home"});
-        var routeData = RoutesData.find(function(e) {return e.id === route});
+        var defaultData = RoutesData.filter(function(e) {return e.id === "home"})[0];
+        var routeData = RoutesData.filter(function(e) {return e.id === route})[0];
+        if (routeData === undefined) {
+            //No route data (probably a blog/post/item
+            return;
+        }
         for (var metaData in routeData.meta) {
             defaultData.meta[metaData] = routeData.meta[metaData];
         }
@@ -89,6 +93,8 @@ requirejs(
 
     hasher.prependHash = "!";
 
+        console.log("starting");
+
     //setup hasher
     function parseHash(newHash, oldHash){
         if (crossroads._getMatchedRoutes(newHash).length > 0) {
@@ -98,6 +104,8 @@ requirejs(
         } else {
             hasher.setHash("home");
         }
+
+        setTimeout(function() {console.log("ready");}, 2000);
     }
     hasher.initialized.add(parseHash); //parse initial hash
     hasher.changed.add(parseHash); //parse hash changes

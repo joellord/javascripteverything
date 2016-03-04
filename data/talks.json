@@ -1,11 +1,27 @@
 [
   {
+    "time": 1467691200000,
+    "title": "Smart homes made smarter with Javascript",
+    "conference": "DevTeachConf",
+    "location": "Montreal, QC, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1467691200000,
+    "title": "Take a gulp at task automation",
+    "conference": "DevTeachConf",
+    "location": "Montreal, QC, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
     "time": 1456376400000,
     "title": "Smart homes made smarter with Javascript",
     "conference": "Confoo",
     "location": "Montreal, QC, Canada",
     "movie": "",
-    "slides": ""
+    "slides": "http://slides.com/joellord/making-smart-homes-smarter-with-javascript"
   },
   {
     "time": 1456376400000,
@@ -13,7 +29,7 @@
     "conference": "Confoo",
     "location": "Montreal, QC, Canada",
     "movie": "",
-    "slides": ""
+    "slides": "http://slides.com/joellord/confoo-websockets"
   },
   {
     "time": 1447477200000,

@@ -15,6 +15,8 @@ for (var i=0; i < blogPosts.length; i++) {
 var SERVER_URL = "http://www.javascripteverything.com";
 var fs = require('fs');
 
+var cheerio = require('cheerio');
+
 function follow(pageToCache, callback) {
     var page = require('webpage').create();
 
@@ -25,11 +27,13 @@ function follow(pageToCache, callback) {
 
         setTimeout(function() {
             var html = page.evaluate(function() {return document.documentElement.outerHTML;});
+            var $ = cheerio.load(html);
+            console.log($.html());
             filename = "../cache/" + pageToCache.replace(/\//g, "_") + ".html";
             fs.write(filename, html, "w+");
             console.log(pageToCache + " was cached");
             page.close();
-        }, 2000);
+        }, 5000);
 
 
     });
