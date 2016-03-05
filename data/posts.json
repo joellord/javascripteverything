@@ -1,5 +1,18 @@
 [
   {
+    "title": "Using Clusters",
+    "subtitle": "Unleashing the full power of multi threads",
+    "time": 1457154000000,
+    "formattedDate": "March 5th, 2016",
+    "author": "Joel Lord",
+    "author_link": "#!about",
+    "production": true,
+    "abstract": "Node is typically single threaded, but using the cluster module, you can spin off many instances of your application.",
+    "keywords": ["javascript", "node", "cluster", "thread"],
+    "id": "2016-03-05_using_cluster",
+    "bg": "post-bg/cluster"
+  },
+  {
     "title": "Array methods you should be using",
     "subtitle": "For a cleaner and more readable code base",
     "time": 1452229200000,
