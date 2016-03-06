@@ -48,7 +48,7 @@
       "twitterData1": {
         "id": "twitterData1",
         "attribute": "value",
-        "value": "Confoo (Feb 23)"
+        "value": "DevTeach Mtl (July 5th)"
       },
       "twitterLabel2": {
         "id": "twitterLabel2",
@@ -58,7 +58,7 @@
       "twitterData2": {
         "id": "twitterData2",
         "attribute": "value",
-        "value": "Array functions in Javascript"
+        "value": "Using clusters in Node"
       }
     },
     "public": true
@@ -121,6 +121,25 @@
     "public": true
   },
   {
+    "id": "blog-all",
+    "cachedId": "blog-all",
+    "description": "Blogging Area",
+    "type": "normal",
+    "meta": {
+      "ogTitle": {
+        "id": "ogTitle",
+        "attribute": "content",
+        "value": "Javascript Everything!"
+      },
+      "ogDescription": {
+        "id": "ogDescription",
+        "attribute": "content",
+        "value": "This is everything I wrote."
+      }
+    },
+    "public": true
+  },
+  {
     "id": "blog",
     "cachedId": "blog",
     "description": "Blogging Area",
@@ -154,25 +173,6 @@
         "id": "ogDescription",
         "attribute": "content",
         "value": "Some of the smart stuff that I wrote."
-      }
-    },
-    "public": true
-  },
-  {
-    "id": "blog-all",
-    "cachedId": "blog-all",
-    "description": "Blogging Area",
-    "type": "normal",
-    "meta": {
-      "ogTitle": {
-        "id": "ogTitle",
-        "attribute": "content",
-        "value": "Javascript Everything!"
-      },
-      "ogDescription": {
-        "id": "ogDescription",
-        "attribute": "content",
-        "value": "This is everything I wrote."
       }
     },
     "public": true

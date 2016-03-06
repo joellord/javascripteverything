@@ -10,6 +10,7 @@ requirejs(
         "components/blog-post-page/blog-post",
         "components/blog-all-page/blog-all",
         "text!../data/routes.json",
+        "text!../data/posts.json",
         "jquery",
         "bootstrap",
         "highlight"
@@ -24,7 +25,8 @@ requirejs(
          BlogComponent,
          BlogPostComponent,
          BlogAllComponent,
-         RoutesData
+         RoutesData,
+         PostsData
     ) {
 
 
@@ -43,6 +45,8 @@ requirejs(
     var routes = [];
     RoutesData = JSON.parse(RoutesData);
     RoutesData.map(function(el) {routes.push(el.id);});
+
+    PostsData = JSON.parse(PostsData);
 
     var parentVm = {
         route: ko.observable(routes[0]),
@@ -74,6 +78,58 @@ requirejs(
     function setMetaTags(route) {
         var defaultData = RoutesData.filter(function(e) {return e.id === "home"})[0];
         var routeData = RoutesData.filter(function(e) {return e.id === route})[0];
+        if (routeData === undefined && route.indexOf("post") > -1) {
+            //blog/post/item
+            var postId = route.split("/")[2];
+            var postData;
+            for (var i = 0; i < PostsData.length; i++) {
+                if (PostsData[i].id === postId) {
+                    postData = PostsData[i];
+                    break;
+                }
+            }
+            if (postData === undefined) {
+                postData = {
+                    title: "Blog Post",
+                    subtitle: "Details",
+                    bg: "home-bg"
+                }
+            }
+            routeData = {
+                "meta": {
+                    "ogTitle": {
+                        "id": "ogTitle",
+                        "attribute": "content",
+                        "value": postData.title
+                    },
+                    "ogDescription": {
+                        "id": "ogDescription",
+                        "attribute": "content",
+                        "value": postData.subtitle
+                    },
+                    "ogImage": {
+                        "id": "ogImage",
+                        "attribute": "content",
+                        "value": "http://javascripteverything.com/img/" + postData.bg + ".jpg"
+                    },
+                    "twitterTitle": {
+                        "id": "twitterTitle",
+                        "attribute": "value",
+                        "value": postData.title
+                    },
+                    "twitterDescription": {
+                        "id": "twitterDescription",
+                        "attribute": "value",
+                        "value": postData.subtitle
+                    },
+                    "twitterImage": {
+                        "id": "twitterImage",
+                        "attribute": "content",
+                        "value": "http://javascripteverything.com/img/" + postData.bg + ".jpg"
+                    }
+                }
+            }
+        }
         if (routeData === undefined) {
             //No route data (probably a blog/post/item
             return;
