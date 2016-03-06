@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Random thoughts from a random dev">
+    <meta name="author" content="Joel Lord">
+    <meta name="og:type" content="website">
+    <meta name="og:url" content="http://www.javascripteverything.com">
+    <meta name="og:title" content="Using Clusters" id="ogTitle">
+    <meta name="og:description" content="Unleashing the full power of multi threads" id="ogDescription">
+    <meta name="og:image" content="http://javascripteverything.com/img/post-bg/cluster.jpg" id="ogImage">
+
+    <!---— twitter card tags additive with the og: tags ---->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:domain" value="javascripteverything.com">
+    <meta name="twitter:title" value="Using Clusters" id="twitterTitle">
+    <meta name="twitter:description" value="Unleashing the full power of multi threads" id="twitterDescription">
+    <meta name="twitter:image" content="http://javascripteverything.com/img/post-bg/cluster.jpg" id="twitterImage">
+    <meta name="twitter:url" value="http://javascripteverything.com/" id="twitterUrl">
+    <meta name="twitter:label1" value="Next event" id="twitterLabel1">
+    <meta name="twitter:data1" value="DevTeach Mtl (July 5th)" id="twitterData1">
+    <meta name="twitter:label2" value="Latest blog article" id="twitterLabel2">
+    <meta name="twitter:data2" value="Using clusters in Node" id="twitterData2">
+
+    <title>Javascript Everything !</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/clean-blog.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/default.min.css">
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-70660833-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="main" src="js/main.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="start" src="js/start.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="knockout" src="js/libs/knockout.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/home-page/home" src="js/components/home-page/home.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/about-page/about" src="js/components/about-page/about.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/speaking-page/speaking" src="js/components/speaking-page/speaking.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/contact-page/contact" src="js/components/contact-page/contact.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/blog-page/blog" src="js/components/blog-page/blog.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/blog-post-page/blog-post" src="js/components/blog-post-page/blog-post.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/blog-all-page/blog-all" src="js/components/blog-all-page/blog-all.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="text" src="js/text.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="jquery" src="js/libs/jquery.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="highlight" src="js/ko_binding_highlight.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="signals" src="js/libs/signals.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap" src="js/libs/bootstrap.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="crossroads" src="js/libs/crossroads.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="hasher" src="js/libs/hasher.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/nav-bar/nav-bar" src="js/components/nav-bar/nav-bar.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="components/ko-footer/ko-footer" src="js/components/ko-footer/ko-footer.js"></script></head>
+
+<body>
+
+    <!-- ko if: false --><!-- /ko -->
+
+    <nav-bar>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">#</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="speaking.html">Speaking</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blogging</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav></nav-bar>
+
+
+    <!-- ko component: {
+      name: route,
+      params: params
+    } --><!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" data-bind="style: {backgroundImage: bgImg}" style="background-image: url(http://localhost:3000/img/post-bg/cluster.jpg); ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading smaller-heading">
+                    <h1 data-bind="text: title">Using Clusters</h1>
+                    <h2 class="subheading" data-bind="text: subtitle">Unleashing the full power of multi threads</h2>
+                    <span class="meta">Posted by <a data-bind="attr: {href: authorLink}, text: author" href="about.html">Joel Lord</a> on <span data-bind="text: formattedDate">March 5th, 2016</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" data-bind="html: postContent, syntaxhighlight: postContent"><p>It is well know that NodeJs is single threaded.  This is one of the reasons why some Java developers are reluctant to make the leap.  NodeJs is powerful and typically doesn't need multiple threads because of its event loop (more on that in a future post).</p>
+
+<h2 class="section-heading">But I have multiple CPUs !</h2>
+
+<p>You are right, and in order to take full advantage of those multiple cores or CPUs, you can use multiple threads.</p>
+
+<p>NodeJs comes with the built-in package "cluster".  This package makes it easy to manage multiple processes.  Let's look at a simple example.</p>
+
+<pre class="hljs javascript"><span class="hljs-keyword">var</span> cluster = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cluster"</span>);
+<span class="hljs-keyword">var</span> CPUs = <span class="hljs-built_in">require</span>(<span class="hljs-string">"os"</span>).cpus();
+
+<span class="hljs-keyword">if</span> (cluster.isMaster) {
+  <span class="hljs-comment">//Launch workers</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; CPUs.length; i++) {
+    cluster.fork();
+  }
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"pid "</span> + cluster.worker.process.pid + <span class="hljs-string">" started"</span>);
+}
+</pre>
+
+<h2 class="section-heading">It's that easy</h2>
+
+<p>If you run the previous example, you will see the following output in your terminal:</p>
+
+<pre class="hljs cpp">pid <span class="hljs-number">49608</span> started
+pid <span class="hljs-number">49609</span> started
+pid <span class="hljs-number">49613</span> started
+pid <span class="hljs-number">49615</span> started
+pid <span class="hljs-number">49610</span> started
+pid <span class="hljs-number">49611</span> started
+pid <span class="hljs-number">49612</span> started
+pid <span class="hljs-number">49614</span> started
+</pre>
+
+<p>I have 8 cores on my CPU so you will see that I started 8 threads and each one have a unique process id (pid).  Now this isn't very useful since we don't do anything with each one of the processes.</p>
+
+<p>Let's see how we can scale up an existing application.</p>
+
+<h2 class="section-heading">Scale up an existing application</h2>
+
+<p>Say I have this very basic application.  It's a simple web server and it returns a simple 200 with a message indicating the process id when it is hit.</p>
+
+<pre class="hljs javascript"><span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">"http"</span>);
+http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+    res.writeHead(<span class="hljs-number">200</span>);
+    res.end(<span class="hljs-string">"Process "</span> + process.pid + <span class="hljs-string">" answered the request.\n"</span>);
+}).listen(<span class="hljs-number">8000</span>);
+</pre>
+
+<p>Now we want this code to be executed in each one of our processes.  In order to do this, we can convert this code into a module and then load it up on each process that we create with the previous cluster code.</p>
+
+<p>app.js</p>
+<pre class="hljs javascript"><span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">"http"</span>);
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">app</span>(<span class="hljs-params"></span>) </span>{
+  http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+        res.writeHead(<span class="hljs-number">200</span>);
+        res.end(<span class="hljs-string">"Process "</span> + process.pid + <span class="hljs-string">" answered the request.\n"</span>);
+    }).listen(<span class="hljs-number">8000</span>);
+};
+
+<span class="hljs-built_in">module</span>.exports = app;
+</pre>
+
+<p>cluster.js</p>
+<pre class="hljs javascript"><span class="hljs-keyword">var</span> cluster = <span class="hljs-built_in">require</span>(<span class="hljs-string">"cluster"</span>);
+<span class="hljs-keyword">var</span> CPUs = <span class="hljs-built_in">require</span>(<span class="hljs-string">"os"</span>).cpus();
+<span class="hljs-keyword">var</span> app = <span class="hljs-built_in">require</span>(<span class="hljs-string">"./app"</span>);
+
+<span class="hljs-keyword">if</span> (cluster.isMaster) {
+  <span class="hljs-comment">//Launch workers</span>
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; CPUs.length; i++) {
+    cluster.fork();
+  }
+} <span class="hljs-keyword">else</span> {
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"pid "</span> + cluster.worker.process.pid + <span class="hljs-string">" started"</span>);
+  app();
+}
+</pre>
+
+<p>And there you go.  Now each one of the processes will be listening for a connection.  If you want to test it, you can use curl</p>
+
+<pre class="hljs cpp">&gt;curl http:<span class="hljs-comment">//localhost:8000</span>
+Process <span class="hljs-number">49612</span> answered the request.
+&gt;curl http:<span class="hljs-comment">//localhost:8000</span>
+Process <span class="hljs-number">49614</span> answered the request.
+&gt;curl http:<span class="hljs-comment">//localhost:8000</span>
+Process <span class="hljs-number">49608</span> answered the request.
+&gt;curl http:<span class="hljs-comment">//localhost:8000</span>
+Process <span class="hljs-number">49609</span> answered the request.
+&gt;curl http:<span class="hljs-comment">//localhost:8000</span>
+</pre>
+
+<p>Node will look for an available process and use this one when the request comes in.</p>
+
+<h2 class="section-heading">What else?</h2>
+
+<p>Well, this is already impressive and you are now using the full capabilities of your server.  But if you are still not convinced, here is another very interesting thing.  Each process has various events.  One of which is the "exit" event.  With this event, you can restart a new process when one dies.  This is helpful in case one of your processes dies.  You can then restart a new one rather than having your whole server die.</p>
+
+<p>Hopefully this will help.  You can find more information on the Node cluster module in the <a href="https://nodejs.org/api/cluster.html" target="_blank">official documentation</a>.</p></div>
+        </div>
+    </div>
+</article>
+<!-- /ko -->
+
+    <hr>
+
+    <!-- Footer -->
+    <ko-footer><footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <li>
+                        <a href="http://www.twitter.com/joel__lord" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ca.linkedin.com/in/joel-lord-9099b232" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.github.com/joellord" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:me@joel-lord.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="copyright text-muted">Copyright © Joel Lord <span data-bind="text: year">2016</span></p>
+                <p class="copyright text-muted">Built on top of <a href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a></p>
+            </div>
+        </div>
+    </div>
+</footer></ko-footer>
+
+
+    <script data-main="js/main" src="js/libs/require.js"></script>
+
+
+
+
+
+</body></html>
