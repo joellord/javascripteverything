@@ -1,5 +1,18 @@
 [
   {
+    "title": "The Node Event Loop",
+    "subtitle": "Coffee shops and the Node event loop",
+    "time": 1458273600000,
+    "formattedDate": "March 18th, 2016",
+    "author": "Joel Lord",
+    "author_link": "#!about",
+    "production": true,
+    "abstract": "The Node event loop is the core concept behind Node's performance.  Here is a little metaphor that will hopefully help you understand a little bit more about it.",
+    "keywords": ["javascript", "node", "event loop"],
+    "id": "2016-03-18_event_loop",
+    "bg": "post-bg/loop"
+  },
+  {
     "title": "Using Clusters",
     "subtitle": "Unleashing the full power of multi threads",
     "time": 1457154000000,

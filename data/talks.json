@@ -1,5 +1,21 @@
 [
   {
+    "time": 1476676800000,
+    "title": "Making Smart Homes Smarter With Javascript",
+    "conference": "Full Stack Toronto",
+    "location": "Toronto, ON, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1470888000000,
+    "title": "Sockets bring light at the end of the tunnel",
+    "conference": "Midwest JS",
+    "location": "Minneapolis, MN, USA",
+    "movie": "",
+    "slides": ""
+  },
+  {
     "time": 1467691200000,
     "title": "Smart homes made smarter with Javascript",
     "conference": "DevTeachConf",

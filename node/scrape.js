@@ -69,6 +69,11 @@ function cachePage(url, cachedName) {
                 var routeRegex = new RegExp("\#\!" + route.id, "ig");
                 newPageContent = newPageContent.replace(routeRegex, route.cachedId + ".html");
             }
+
+            //Change any reference to localhost:3000 to the actual site
+            newPageContent = newPageContent.replace(/localhost\:3000/, "javascripteverything.com");
+
+            newPageContent = newPageContent.replace("<script data-main=\"js/main\" src=\"js/libs/require.js\"></script>", "");
             sitemap.push("http://www.javascripteverything.com/" + cachedName);
             fs.write("../cache/" + cachedName, newPageContent, "w");
             iterate();
