@@ -1,5 +1,18 @@
 [
   {
+    "title": "Intro to SystemJs",
+    "subtitle": "The Universal Loader That Lets You Use ES6 Modules",
+    "time": 1464753600000,
+    "formattedDate": "June 1st, 2016",
+    "author": "Joel Lord",
+    "author_link": "#!about",
+    "production": true,
+    "abstract": "I stumbled on SystemJs today.  It seems very interesting to include modules using the ES6 format so I gave it a try and here are some of my findings.",
+    "keywords": ["javascript", "systemjs", "es6", "modules"],
+    "id": "2016-06-01_system_js",
+    "bg": "post-bg/puzzle"
+  },
+  {
     "title": "The Node Event Loop",
     "subtitle": "Coffee shops and the Node event loop",
     "time": 1458273600000,

@@ -1,11 +1,13 @@
 define(["knockout", "text!components/speaking-page/speaking.html"], function(ko, template) {
 
     var bgImage = "speaking-bg";
-    var title = "If you have knowledge, let others light their candles in it.";
-    var subtitle = "-Margaret Fuller";
-    //Other quote:
-    //"If you get, give. If you learn, teach."
-    // - Maya Angelou
+    // var title = "If you have knowledge, let others light their candles in it.";
+    // var subtitle = "-Margaret Fuller";
+    //Other quotes:
+    var title = "If you get, give. If you learn, teach.";
+    var subtitle = "-Maya Angelou";
+    //var title = "Knowledge increases by sharing, not saving."
+    //var subtitle = "-Kamari aka Lyrical"
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var today = new Date();
 

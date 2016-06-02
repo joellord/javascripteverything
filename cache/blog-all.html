@@ -14,6 +14,8 @@
     <!---— twitter card tags additive with the og: tags ---->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:domain" value="javascripteverything.com">
+    <meta name="twitter:site" value="@joel__lord">
+    <meta name="twitter:creator" value="@joel__lord">
     <meta name="twitter:title" value="Javascript Everything!" id="twitterTitle">
     <meta name="twitter:description" value="Random thoughts from a random dev..." id="twitterDescription">
     <meta name="twitter:image" content="http://javascripteverything.com/img/home-bg.jpg" id="twitterImage">
@@ -108,7 +110,7 @@
       params: params
     } --><!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header small-header" data-bind="style: {backgroundImage: bgImg}" style="background-image: url(http://localhost:3000/img/blog-bg.jpg); ">
+<header class="intro-header small-header" data-bind="style: {backgroundImage: bgImg}" style="background-image: url(http://javascripteverything.com/img/blog-bg.jpg); ">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -128,6 +130,24 @@
         <div class="col-lg-1 col-md-1"></div>
         <div class="col-lg-8 col-md-8">
             <!-- ko foreach: blogPosts -->
+            <div class="post-preview">
+                <a data-bind="attr: {href: 'blog.html/post/' + id}" href="2016-06-01_system_js.html">
+                    <h2 class="post-title" data-bind="text: title">Intro to SystemJs</h2>
+                    <h3 class="post-subtitle" data-bind="text: abstract">I stumbled on SystemJs today.  It seems very interesting to include modules using the ES6 format so I gave it a try and here are some of my findings.</h3>
+                </a>
+                <p class="post-meta">Posted by <a data-bind="attr: {href: author_link}, text: author" href="about.html">Joel Lord</a> on <span data-bind="text: formattedDate">June 1st, 2016</span></p>
+            </div>
+            <hr>
+            
+            <div class="post-preview">
+                <a data-bind="attr: {href: 'blog.html/post/' + id}" href="2016-03-18_event_loop.html">
+                    <h2 class="post-title" data-bind="text: title">The Node Event Loop</h2>
+                    <h3 class="post-subtitle" data-bind="text: abstract">The Node event loop is the core concept behind Node's performance.  Here is a little metaphor that will hopefully help you understand a little bit more about it.</h3>
+                </a>
+                <p class="post-meta">Posted by <a data-bind="attr: {href: author_link}, text: author" href="about.html">Joel Lord</a> on <span data-bind="text: formattedDate">March 18th, 2016</span></p>
+            </div>
+            <hr>
+            
             <div class="post-preview">
                 <a data-bind="attr: {href: 'blog.html/post/' + id}" href="2016-03-05_using_cluster.html">
                     <h2 class="post-title" data-bind="text: title">Using Clusters</h2>
@@ -229,8 +249,8 @@
                 <div class="bio">
                     {<br>
                     &nbsp;&nbsp;  name: "Joel Lord",<br>
-                    &nbsp;&nbsp;  job: "Development Manager",<br>
-                    &nbsp;&nbsp;  employer: "Macadamian Tech",<br>
+                    &nbsp;&nbsp;  job: "Technical Director",<br>
+                    &nbsp;&nbsp;  employer: "Spiria",<br>
                     &nbsp;&nbsp;  tabsOrSpaces: "spaces",<br>
                     &nbsp;&nbsp;  keywords: [<br>
                     &nbsp;&nbsp;&nbsp;&nbsp;    "javascript junkie",<br>
@@ -294,7 +314,7 @@
 </footer></ko-footer>
 
 
-    <script data-main="js/main" src="js/libs/require.js"></script>
+    
 
 
 

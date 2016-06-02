@@ -14,6 +14,8 @@
     <!---— twitter card tags additive with the og: tags ---->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:domain" value="javascripteverything.com">
+    <meta name="twitter:site" value="@joel__lord">
+    <meta name="twitter:creator" value="@joel__lord">
     <meta name="twitter:title" value="Javascript Everything!" id="twitterTitle">
     <meta name="twitter:description" value="Random thoughts from a random dev..." id="twitterDescription">
     <meta name="twitter:image" content="http://javascripteverything.com/img/home-bg.jpg" id="twitterImage">
@@ -108,14 +110,14 @@
       params: params
     } --><!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
-<header class="intro-header" data-bind="style: {backgroundImage: bgImg}" style="background-image: url(http://localhost:3000/img/speaking-bg.jpg); ">
+<header class="intro-header" data-bind="style: {backgroundImage: bgImg}" style="background-image: url(http://javascripteverything.com/img/speaking-bg.jpg); ">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <h1 data-bind="text: title">If you have knowledge, let others light their candles in it.</h1>
+                    <h1 data-bind="text: title">If you get, give. If you learn, teach.</h1>
                     <hr class="small">
-                    <span class="subheading" data-bind="text: subtitle">-Margaret Fuller</span>
+                    <span class="subheading" data-bind="text: subtitle">-Maya Angelou</span>
                 </div>
             </div>
         </div>
@@ -132,7 +134,72 @@
 
             <table data-bind="foreach: futureEvents" class="table table-striped small-table-text">
                 <tbody><tr>
-                    <td data-bind="text: formattedDate">July 5, 2016</td>
+                    <td data-bind="text: formattedDate">October 17, 2016</td>
+                    <td data-bind="text: title">Making Smart Homes Smarter With Javascript</td>
+                    <td data-bind="text: conference">Full Stack Toronto</td>
+                    <td data-bind="text: location">Toronto, ON, Canada</td>
+                    <td>
+                        <!-- ko if: movie --><!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides --><!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
+                <tbody><tr>
+                    <td data-bind="text: formattedDate">August 11, 2016</td>
+                    <td data-bind="text: title">Sockets bring light at the end of the tunnel</td>
+                    <td data-bind="text: conference">Midwest JS</td>
+                    <td data-bind="text: location">Minneapolis, MN, USA</td>
+                    <td>
+                        <!-- ko if: movie --><!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides --><!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
+                <tbody><tr>
+                    <td data-bind="text: formattedDate">August 5, 2016</td>
+                    <td data-bind="text: title">Robocalypse: Controlling robots with kinect gestures</td>
+                    <td data-bind="text: conference">Northeast PHP</td>
+                    <td data-bind="text: location">Charlottetown, PE, Canada</td>
+                    <td>
+                        <!-- ko if: movie --><!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides --><!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
+                <tbody><tr>
+                    <td data-bind="text: formattedDate">August 4, 2016</td>
+                    <td data-bind="text: title">Smart homes made smarter with Javascript</td>
+                    <td data-bind="text: conference">Northeast PHP</td>
+                    <td data-bind="text: location">Charlottetown, PE, Canada</td>
+                    <td>
+                        <!-- ko if: movie --><!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides --><!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
+                <tbody><tr>
+                    <td data-bind="text: formattedDate">July 7, 2016</td>
+                    <td data-bind="text: title">Take a gulp at task automation</td>
+                    <td data-bind="text: conference">DevTeachConf</td>
+                    <td data-bind="text: location">Montreal, QC, Canada</td>
+                    <td>
+                        <!-- ko if: movie --><!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides --><!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
+                <tbody><tr>
+                    <td data-bind="text: formattedDate">July 6, 2016</td>
                     <td data-bind="text: title">Smart homes made smarter with Javascript</td>
                     <td data-bind="text: conference">DevTeachConf</td>
                     <td data-bind="text: location">Montreal, QC, Canada</td>
@@ -145,10 +212,23 @@
                 </tr>
             </tbody>
                 <tbody><tr>
-                    <td data-bind="text: formattedDate">July 5, 2016</td>
-                    <td data-bind="text: title">Take a gulp at task automation</td>
-                    <td data-bind="text: conference">DevTeachConf</td>
-                    <td data-bind="text: location">Montreal, QC, Canada</td>
+                    <td data-bind="text: formattedDate">June 20, 2016</td>
+                    <td data-bind="text: title">Websockets Bring Light At The End Of The Tunnel</td>
+                    <td data-bind="text: conference">NodePDX</td>
+                    <td data-bind="text: location">Portland, OR, USA</td>
+                    <td>
+                        <!-- ko if: movie --><!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides --><!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
+                <tbody><tr>
+                    <td data-bind="text: formattedDate">June 8, 2016</td>
+                    <td data-bind="text: title">Introduction to Framework7</td>
+                    <td data-bind="text: conference">Ottawa Javascript</td>
+                    <td data-bind="text: location">Ottawa, ON, Canada</td>
                     <td>
                         <!-- ko if: movie --><!-- /ko -->
                     </td>
@@ -161,6 +241,21 @@
             <h2 class="section-heading">Past Events</h2>
 
             <table data-bind="foreach: pastEvents" class="table table-striped small-table-text">
+                <tbody><tr>
+                    <td data-bind="text: formattedDate">May 23, 2016</td>
+                    <td data-bind="text: title">Introduction to Framework7</td>
+                    <td data-bind="text: conference">Ottawa Mobile Development Meetup</td>
+                    <td data-bind="text: location">Ottawa, ON, Canada</td>
+                    <td>
+                        <!-- ko if: movie --><!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="https://github.com/joellord/Ottawa_Mobile_Dev_May_2016"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
                 <tbody><tr>
                     <td data-bind="text: formattedDate">February 25, 2016</td>
                     <td data-bind="text: title">Smart homes made smarter with Javascript</td>
@@ -339,7 +434,7 @@
 </footer></ko-footer>
 
 
-    <script data-main="js/main" src="js/libs/require.js"></script>
+    
 
 
 

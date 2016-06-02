@@ -16,7 +16,31 @@
     "slides": ""
   },
   {
-    "time": 1467691200000,
+    "time": 1470438000000,
+    "title": "Robocalypse: Controlling robots with kinect gestures",
+    "conference": "Northeast PHP",
+    "location": "Charlottetown, PE, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1470351600000,
+    "title": "Smart homes made smarter with Javascript",
+    "conference": "Northeast PHP",
+    "location": "Charlottetown, PE, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1467864000000,
+    "title": "Take a gulp at task automation",
+    "conference": "DevTeachConf",
+    "location": "Montreal, QC, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1467777600000,
     "title": "Smart homes made smarter with Javascript",
     "conference": "DevTeachConf",
     "location": "Montreal, QC, Canada",
@@ -24,12 +48,28 @@
     "slides": ""
   },
   {
-    "time": 1467691200000,
-    "title": "Take a gulp at task automation",
-    "conference": "DevTeachConf",
-    "location": "Montreal, QC, Canada",
+    "time": 1466395200000,
+    "title": "Websockets Bring Light At The End Of The Tunnel",
+    "conference": "NodePDX",
+    "location": "Portland, OR, USA",
     "movie": "",
     "slides": ""
+  },
+  {
+    "time": 1465358400000,
+    "title": "Introduction to Framework7",
+    "conference": "Ottawa Javascript",
+    "location": "Ottawa, ON, Canada",
+    "movie": "",
+    "slides": ""
+  },
+  {
+    "time": 1463976000000,
+    "title": "Introduction to Framework7",
+    "conference": "Ottawa Mobile Development Meetup",
+    "location": "Ottawa, ON, Canada",
+    "movie": "",
+    "slides": "https://github.com/joellord/Ottawa_Mobile_Dev_May_2016"
   },
   {
     "time": 1456376400000,
