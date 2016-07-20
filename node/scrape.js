@@ -77,6 +77,6 @@ function cachePage(url, cachedName) {
             sitemap.push("http://www.javascripteverything.com/" + cachedName);
             fs.write("../cache/" + cachedName, newPageContent, "w");
             iterate();
-        }, 5000);
+        }, 4500);
     };
 }

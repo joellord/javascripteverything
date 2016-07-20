@@ -37,7 +37,7 @@
     "conference": "DevTeachConf",
     "location": "Montreal, QC, Canada",
     "movie": "",
-    "slides": ""
+    "slides": "http://www.slideshare.net/JoelLord4/take-a-gulp-at-task-automation"
   },
   {
     "time": 1467777600000,
@@ -45,15 +45,15 @@
     "conference": "DevTeachConf",
     "location": "Montreal, QC, Canada",
     "movie": "",
-    "slides": ""
+    "slides": "http://www.slideshare.net/JoelLord4/smart-homes-made-smarter-with-javascript"
   },
   {
     "time": 1466395200000,
     "title": "Websockets Bring Light At The End Of The Tunnel",
     "conference": "NodePDX",
     "location": "Portland, OR, USA",
-    "movie": "",
-    "slides": ""
+    "movie": "https://www.youtube.com/watch?v=aX5pDfkpU2M",
+    "slides": "/slides/nodepdx-websockets.pdf"
   },
   {
     "time": 1465358400000,
@@ -61,7 +61,7 @@
     "conference": "Ottawa Javascript",
     "location": "Ottawa, ON, Canada",
     "movie": "",
-    "slides": ""
+    "slides": "https://github.com/joellord/Ottawa_Mobile_Dev_May_2016"
   },
   {
     "time": 1463976000000,

@@ -184,7 +184,11 @@
                         <!-- ko if: slides --><!-- /ko -->
                     </td>
                 </tr>
-            </tbody>
+            </tbody></table>
+
+            <h2 class="section-heading">Past Events</h2>
+
+            <table data-bind="foreach: pastEvents" class="table table-striped small-table-text">
                 <tbody><tr>
                     <td data-bind="text: formattedDate">July 7, 2016</td>
                     <td data-bind="text: title">Take a gulp at task automation</td>
@@ -194,7 +198,9 @@
                         <!-- ko if: movie --><!-- /ko -->
                     </td>
                     <td>
-                        <!-- ko if: slides --><!-- /ko -->
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="http://www.slideshare.net/JoelLord4/take-a-gulp-at-task-automation"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
                     </td>
                 </tr>
             </tbody>
@@ -207,7 +213,9 @@
                         <!-- ko if: movie --><!-- /ko -->
                     </td>
                     <td>
-                        <!-- ko if: slides --><!-- /ko -->
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="http://www.slideshare.net/JoelLord4/smart-homes-made-smarter-with-javascript"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
                     </td>
                 </tr>
             </tbody>
@@ -217,10 +225,14 @@
                     <td data-bind="text: conference">NodePDX</td>
                     <td data-bind="text: location">Portland, OR, USA</td>
                     <td>
-                        <!-- ko if: movie --><!-- /ko -->
+                        <!-- ko if: movie -->
+                        <a target="_blank" data-bind="attr: {href: movie}" href="https://www.youtube.com/watch?v=aX5pDfkpU2M"><i class="fa fa-film"></i></a>
+                        <!-- /ko -->
                     </td>
                     <td>
-                        <!-- ko if: slides --><!-- /ko -->
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="/slides/nodepdx-websockets.pdf"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
                     </td>
                 </tr>
             </tbody>
@@ -233,14 +245,12 @@
                         <!-- ko if: movie --><!-- /ko -->
                     </td>
                     <td>
-                        <!-- ko if: slides --><!-- /ko -->
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="https://github.com/joellord/Ottawa_Mobile_Dev_May_2016"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
                     </td>
                 </tr>
-            </tbody></table>
-
-            <h2 class="section-heading">Past Events</h2>
-
-            <table data-bind="foreach: pastEvents" class="table table-striped small-table-text">
+            </tbody>
                 <tbody><tr>
                     <td data-bind="text: formattedDate">May 23, 2016</td>
                     <td data-bind="text: title">Introduction to Framework7</td>
