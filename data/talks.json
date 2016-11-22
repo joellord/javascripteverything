@@ -1,5 +1,13 @@
 [
   {
+    "time": 1478667600000,
+    "title": "Making Smart Homes Smarter With Javascript",
+    "conference": "Ottawa Javascript",
+    "location": "Ottawa, ON, Canada",
+    "movie": "",
+    "slides": "http://www.slideshare.net/JoelLord4/smart-homes-made-smarter-with-javascript-68581863"
+  },
+  {
     "time": 1476676800000,
     "title": "Making Smart Homes Smarter With Javascript",
     "conference": "Full Stack Toronto",
@@ -13,7 +21,7 @@
     "conference": "Midwest JS",
     "location": "Minneapolis, MN, USA",
     "movie": "",
-    "slides": ""
+    "slides": "http://www.slideshare.net/JoelLord4/websockets-bring-light-at-the-end-of-the-tunnel"
   },
   {
     "time": 1470438000000,
@@ -21,7 +29,7 @@
     "conference": "Northeast PHP",
     "location": "Charlottetown, PE, Canada",
     "movie": "",
-    "slides": ""
+    "slides": "http://www.slideshare.net/JoelLord4/robocalypse-controlling-robots-with-a-kinect"
   },
   {
     "time": 1470351600000,
@@ -29,7 +37,7 @@
     "conference": "Northeast PHP",
     "location": "Charlottetown, PE, Canada",
     "movie": "",
-    "slides": ""
+    "slides": "http://www.slideshare.net/JoelLord4/making-smart-homes-smarter-with-javascript"
   },
   {
     "time": 1467864000000,

@@ -132,6 +132,17 @@
             <!-- ko foreach: blogPosts -->
             <!-- ko if: ($parent.showFirstOnly() && $index() < 2) || !$parent.showFirstOnly() -->
             <div class="post-preview">
+                <a data-bind="attr: {href: 'blog.html/post/' + id}" href="2016-10-22_machine_learning.html">
+                    <h2 class="post-title" data-bind="text: title">Machine Learning in JS</h2>
+                    <h3 class="post-subtitle" data-bind="text: abstract">Machine learning can seem like a complex subject but really, it's easy to get started.  See how you can create your first machine learning script in Javascript.</h3>
+                </a>
+                <p class="post-meta">Posted by <a data-bind="attr: {href: author_link}, text: author" href="about.html">Joel Lord</a> on <span data-bind="text: formattedDate">October 22nd, 2016</span></p>
+            </div>
+            <hr>
+            <!-- /ko -->
+            
+            <!-- ko if: ($parent.showFirstOnly() && $index() < 2) || !$parent.showFirstOnly() -->
+            <div class="post-preview">
                 <a data-bind="attr: {href: 'blog.html/post/' + id}" href="2016-06-01_system_js.html">
                     <h2 class="post-title" data-bind="text: title">Intro to SystemJs</h2>
                     <h3 class="post-subtitle" data-bind="text: abstract">I stumbled on SystemJs today.  It seems very interesting to include modules using the ES6 format so I gave it a try and here are some of my findings.</h3>
@@ -141,16 +152,7 @@
             <hr>
             <!-- /ko -->
             
-            <!-- ko if: ($parent.showFirstOnly() && $index() < 2) || !$parent.showFirstOnly() -->
-            <div class="post-preview">
-                <a data-bind="attr: {href: 'blog.html/post/' + id}" href="2016-03-18_event_loop.html">
-                    <h2 class="post-title" data-bind="text: title">The Node Event Loop</h2>
-                    <h3 class="post-subtitle" data-bind="text: abstract">The Node event loop is the core concept behind Node's performance.  Here is a little metaphor that will hopefully help you understand a little bit more about it.</h3>
-                </a>
-                <p class="post-meta">Posted by <a data-bind="attr: {href: author_link}, text: author" href="about.html">Joel Lord</a> on <span data-bind="text: formattedDate">March 18th, 2016</span></p>
-            </div>
-            <hr>
-            <!-- /ko -->
+            <!-- ko if: ($parent.showFirstOnly() && $index() < 2) || !$parent.showFirstOnly() --><!-- /ko -->
             
             <!-- ko if: ($parent.showFirstOnly() && $index() < 2) || !$parent.showFirstOnly() --><!-- /ko -->
             

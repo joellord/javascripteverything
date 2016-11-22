@@ -132,7 +132,26 @@
 
             <h2 class="section-heading">Future Events</h2>
 
-            <table data-bind="foreach: futureEvents" class="table table-striped small-table-text">
+            <table data-bind="foreach: futureEvents" class="table table-striped small-table-text"></table>
+
+            <h2 class="section-heading">Past Events</h2>
+
+            <table data-bind="foreach: pastEvents" class="table table-striped small-table-text">
+                <tbody><tr>
+                    <td data-bind="text: formattedDate">November 9, 2016</td>
+                    <td data-bind="text: title">Making Smart Homes Smarter With Javascript</td>
+                    <td data-bind="text: conference">Ottawa Javascript</td>
+                    <td data-bind="text: location">Ottawa, ON, Canada</td>
+                    <td>
+                        <!-- ko if: movie --><!-- /ko -->
+                    </td>
+                    <td>
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="http://www.slideshare.net/JoelLord4/smart-homes-made-smarter-with-javascript-68581863"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
+                    </td>
+                </tr>
+            </tbody>
                 <tbody><tr>
                     <td data-bind="text: formattedDate">October 17, 2016</td>
                     <td data-bind="text: title">Making Smart Homes Smarter With Javascript</td>
@@ -155,7 +174,9 @@
                         <!-- ko if: movie --><!-- /ko -->
                     </td>
                     <td>
-                        <!-- ko if: slides --><!-- /ko -->
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="http://www.slideshare.net/JoelLord4/websockets-bring-light-at-the-end-of-the-tunnel"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
                     </td>
                 </tr>
             </tbody>
@@ -168,7 +189,9 @@
                         <!-- ko if: movie --><!-- /ko -->
                     </td>
                     <td>
-                        <!-- ko if: slides --><!-- /ko -->
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="http://www.slideshare.net/JoelLord4/robocalypse-controlling-robots-with-a-kinect"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
                     </td>
                 </tr>
             </tbody>
@@ -181,14 +204,12 @@
                         <!-- ko if: movie --><!-- /ko -->
                     </td>
                     <td>
-                        <!-- ko if: slides --><!-- /ko -->
+                        <!-- ko if: slides -->
+                        <a target="_blank" data-bind="attr: {href: slides}" href="http://www.slideshare.net/JoelLord4/making-smart-homes-smarter-with-javascript"><i class="fa fa-file-powerpoint-o"></i></a>
+                        <!-- /ko -->
                     </td>
                 </tr>
-            </tbody></table>
-
-            <h2 class="section-heading">Past Events</h2>
-
-            <table data-bind="foreach: pastEvents" class="table table-striped small-table-text">
+            </tbody>
                 <tbody><tr>
                     <td data-bind="text: formattedDate">July 7, 2016</td>
                     <td data-bind="text: title">Take a gulp at task automation</td>

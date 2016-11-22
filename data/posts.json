@@ -1,5 +1,18 @@
 [
   {
+    "title": "Machine Learning in JS",
+    "subtitle": "Creating your first machine learning script in Javascript",
+    "time": 1477108800000,
+    "formattedDate": "October 22nd, 2016",
+    "author": "Joel Lord",
+    "author_link": "#!about",
+    "production": true,
+    "abstract": "Machine learning can seem like a complex subject but really, it's easy to get started.  See how you can create your first machine learning script in Javascript.",
+    "keywords": ["javascript", "systemjs", "es6", "modules"],
+    "id": "2016-10-22_machine_learning",
+    "bg": "post-bg/machine"
+  },
+  {
     "title": "Intro to SystemJs",
     "subtitle": "The Universal Loader That Lets You Use ES6 Modules",
     "time": 1464753600000,
